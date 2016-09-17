@@ -1,0 +1,8 @@
+@import "compass";
+
+$blue: #0000FF;
+
+body {
+  @include border-radius(5px);
+  background: $blue;
+}
