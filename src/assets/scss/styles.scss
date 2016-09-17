@@ -1,14 +1,40 @@
 @import "compass";
 
 
-body {
+$gray1: #656968;
+@font-face {
+  font-family: Cabin;
+  src: url(../fonts/Cabin-Regular.otf);
+}
 
+body {
+  font-family: Arial, sans-serif;
 }
 
 .main-wrapper {
   width:930px;
   margin:0 auto;
 }
+
+.sprite {
+  &:before {
+    content:"";
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url(images/gr_dc.png);
+    background-color:red;
+  }
+
+  &.sprite-item-1:before {
+    background-position:0 0;
+  }
+}
+
+
+
+
+
 
 #main-header {
   #main-logo {
@@ -27,12 +53,28 @@ body {
     right:0;
     height:22px;
 
+    a {
+      text-decoration:underline;
+      color:$gray1;
+    }
+
     > * {
       display: inline-block;
       height:100%;
       padding-right:10px;
       margin-right:10px;
-      border-right:solid 1px #999;
+      border-right:solid 1px $gray1;
+      font-size:13px;
+
+      &.sprite {
+        padding-left:25px;
+        position:relative;
+
+        &:before {
+          position: absolute;
+          left:0;
+        }
+      }
 
       &:last-child {
         padding:0;
@@ -43,14 +85,15 @@ body {
   }
 
   .main-options {
-    background:green;
     height:44px;
     line-height:44px;
+    font-family: "Cabin";
+    @include background-image(linear-gradient(#5bc666, #308a33));
 
     a {
       color:#FFF;
-      font-size:18px;
-      margin-right:38px;
+      font-size:17px;
+      margin-right:37px;
       display:inline-block;
     }
   }
