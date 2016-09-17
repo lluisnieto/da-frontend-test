@@ -1,6 +1,6 @@
 @import "compass";
 
-$main-bg-color: #454545;
+$slideshow-bg-color: #454545;
 $main-text-color: #dcdedd;
 $gray1: #656968;
 
@@ -13,35 +13,8 @@ $gray1: #656968;
 
 body {
   font-family: Arial, sans-serif;
-  background-color:$main-bg-color;
 }
 
-h1 {
-  text-align:center;
-  color:$main-text-color;
-  border-bottom:dotted 1px $main-text-color;
-  position: relative;
-  color:rgba(0,0,0,0);
-  font-family: Cabin;
-  font-weight:bold;
-  font-size:30px;
-
-  &:before {
-    content: attr(data-txt);
-    color: $main-text-color;
-    position:absolute;
-    display: inline-block;
-    top:15px;
-    padding:0 20px;
-    background-color:$main-bg-color;
-  }
-}
-
-h2 {
-  text-align:center;
-  color:$main-text-color;
-  font-size:20px;
-}
 
 .main-wrapper {
   width:930px;
@@ -133,6 +106,50 @@ h2 {
   }
 }
 
-#content-wrapper {
+#slideshow-wrapper {
   color:$main-text-color;
+  background-color:$slideshow-bg-color;
+  height:523px;
+  padding-top:50px;
+  position: relative;
+
+  .title {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+  }
+
+  h1 {
+    text-align:center;
+    color:$main-text-color;
+    border-bottom:dotted 1px $main-text-color;
+    position: relative;
+    color:rgba(0,0,0,0);
+    font-family: Cabin;
+    font-weight:bold;
+    font-size:30px;
+    width:100%;
+
+    &:before {
+      content: attr(data-txt);
+      color: $main-text-color;
+      position:absolute;
+      display: inline-block;
+      top:15px;
+      padding:0 20px;
+      background-color:$slideshow-bg-color;
+    }
+  }
+
+  h2 {
+    text-align:center;
+    color:$main-text-color;
+    font-size:20px;
+  }
+}
+
+#main-content {
+  background:#FFF;
+  overflow: hidden;
 }
