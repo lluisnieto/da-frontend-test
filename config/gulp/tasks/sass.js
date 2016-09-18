@@ -9,9 +9,5 @@ gulp.task('sass-compass', function(){
 			config_file: './config.rb',
 			sass: 'src/assets/scss',
 			css: 'src/assets/css'
-		}))
-    	/*.pipe(gulp.dest(function(file) {
-    		return file.base;
-		}));*/
-		.pipe(gulp.dest('src/assets'));
+		}));
 });
