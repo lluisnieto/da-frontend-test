@@ -13,7 +13,7 @@
 - Ver directamente el ejercicio; 2 archivos: index.html, index_jquery.html
 
 ## Enunciado
-"Doctoralia tiene más de 100 millones de visitas anuales. En este ejercicio se maquetará una de sus 
+".. tiene más de 100 millones de visitas anuales. En este ejercicio se maquetará una de sus 
 páginas más visitadas.  
 Plasmar en HTML + CSS el diseño de la página (design.jpg) con los recursos que sean necesarios. 
 Dentro del archivo comprimido hay una carpeta "images" con las imágenes necesarias. Las fuentes 
