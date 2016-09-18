@@ -1,9 +1,6 @@
+@import "variables";
+@import "keyframes";
 @import "compass";
-
-$slideshow-bg-color: #454545;
-$main-text-color: #dcdedd;
-$gray1: #656968;
-$active-bg: #e6f5e6;
 
 
 @font-face {
@@ -112,12 +109,22 @@ body {
 }
 
 #slideshow-wrapper {
-  color:$main-text-color;
   background-color:$slideshow-bg-color;
   height:523px;
   padding-top:135px;
   position: relative;
   font-family:Cabin;
+
+  &:before {
+    content:"";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:90px;
+    bottom:0;
+    background:red;
+    @include background-image(linear-gradient($slideshow-bg-color, #7e7e7e));
+  }
 
   .title {
     position: absolute;
@@ -212,13 +219,21 @@ body {
     }
   }
 
+  .claim {
+    font-family:Cabin;
+    position: absolute;
+    color:#FFF;
+    font-size:22px;
+    font-weight:bold;
+    left:640px;
+    top:8px;
+  }
+
   ol {
     list-style: none;
     font-size:18px;
     letter-spacing:1px;
     counter-reset: elem;
-
-    $off-gray: #9b9893;
 
     li {
       position: relative;
@@ -241,6 +256,26 @@ body {
         top: 0;
         letter-spacing:0;
         @include border-radius(15px);
+      }
+    }
+  }
+
+  .features {
+    position: relative;
+    left:45px;
+    top:55px;
+
+    @for $i from 1 through 4 {
+      li:nth-child(#{$i}) {
+        animation-name: list#{$i};
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+
+        &:before {
+          animation-name: list#{$i};
+          animation-duration: 20s;
+          animation-iteration-count: infinite;
+        }
       }
     }
   }
@@ -395,11 +430,17 @@ body {
     font-size:13px;
     @include border-radius(3px);
 
+    h3 {
+      font-size:18px;
+      margin: 0 0 10px 0;
+    }
 
     .phone {
       color:#53a462;
       font-size:30px;
       text-decoration: none;
+      display: inline-block;
+      margin-bottom:10px;
     }
 
     input {
@@ -426,48 +467,4 @@ footer {
     color:$gray1;
     text-decoration:underline;
   }
-}
-
-@keyframes motion {
-  0%      { left:0 }
-  21.72%  { left:0 }
-  24.98%  { left:-461px }
-  46.70%  { left:-461px }
-  49.96%  { left:-922px }
-  71.68%  { left:-922px }
-  74.94%  { left:-1383px }
-  96.66%  { left:-1383px }
-  100%    { left:-1844px }
-}
-
-@keyframes opacity1 {
-  0%      { opacity:1 }
-  5.43%   { opacity:1 }
-  16.29%  { opacity:0 }
-  99.99%     { opacity:0 }
-  100%    { opacity:0 }
-}
-
-@keyframes opacity2 {
-  0%      { opacity:1 }
-  30.43%  { opacity:1 }
-  41.29%   { opacity:0 }
-  99.99%     { opacity:0 }
-  100%    { opacity:1 }
-}
-
-@keyframes opacity3 {
-  0%      { opacity:1 }
-  55.43%  { opacity:1 }
-  66.29%  { opacity:0 }
-  99.99%     { opacity:0 }
-  100%    { opacity:1 }
-}
-
-@keyframes opacity4 {
-  0%      { opacity:1 }
-  80.43%  { opacity:1 }
-  91.29%  { opacity:0 }
-  99.99%     { opacity:0 }
-  100%    { opacity:1 }
 }
