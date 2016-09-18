@@ -3,7 +3,7 @@
 $slideshow-bg-color: #454545;
 $main-text-color: #dcdedd;
 $gray1: #656968;
-
+$active-bg: #e6f5e6;
 
 
 @font-face {
@@ -176,15 +176,30 @@ body {
       font-weight:normal;
     }
 
+    tr.active td {
+      background-color: $active-bg !important;
+    }
+
     th {
       font-size:16px;
     }
 
     label {
       font-weight:normal;
+      cursor:pointer;
 
       input {
         margin-right:5px;
+      }
+    }
+
+    tbody {
+      td {
+        background-color:#ffffcc;
+        cursor:pointer;
+      }
+      tr:nth-child(odd) td {
+        background-color:#f2f2f2;
       }
     }
 
