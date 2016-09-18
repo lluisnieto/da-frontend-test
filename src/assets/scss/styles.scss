@@ -316,7 +316,8 @@ body {
       @include input-placeholder {
         font-style:italic;
       }
-      @include background-image(linear-gradient(#FFF 80%, #CCC 100%));
+      // @include background-image(linear-gradient(#FFF 80%, #CCC 100%));
+      @include box-shadow(rgba(black, 0.15) 0 0 8px inset);
     }
   }
 }
