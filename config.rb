@@ -6,4 +6,4 @@ images_dir = 'src/assets/images'
 javascripts_dir = 'src/assets/js'
 relative_assets = true
 line_comments = false
-output_style = :extended
+output_style = :compressed
