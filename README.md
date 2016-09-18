@@ -6,6 +6,12 @@
 - JS/jQuery
 - SASS+Compass (Se necesita Ruby instalado para compilar)
 
+## Instrucciones de uso
+- Clonar proyecto
+- Instalar modulos: npm install
+- Para compilar estilos, basta con ejecutar comando en la raíz del proyecto: npm run sass
+- Ver directamente el ejercicio; 2 archivos: index.html, index_jquery.html
+
 ## Enunciado
 "Doctoralia tiene más de 100 millones de visitas anuales. En este ejercicio se maquetará una de sus 
 páginas más visitadas.  
@@ -28,7 +34,6 @@ portátil que vaya deslizándose automáticamente de manera lineal. Aspectos té
 - Toda la fila es clickable. Cuando se clicka, debe ponerse el checkbox en "checked" y cambiar el fondo de de la fila por el color: #e6f5e6"
 
 ## Anotaciones
-- Para compilar estilos basta con ejecutar comando en la raíz del proyecto: npm run sass
 - La solución propuesta para el Slider esta puramente desarrollada con animaciones de CSS.
 - Se ha intentado exprimir al máximo la potencia de CSS evitando un uso innecesario de JS.
 - Compass garantiza la compatibilidad entre navegadores.
